@@ -1,4 +1,5 @@
 public class Mobilya {
+
     private String aciklama;
     private double yukseklik;
     private boolean kapaliMi;
@@ -8,7 +9,7 @@ public class Mobilya {
 
     public Mobilya(String aciklama, double yukseklik, boolean kapaliMi) {
         this.aciklama = aciklama;
-        setYukseklik(yukseklik);
+        this.yukseklik = yukseklik;
         this.kapaliMi = kapaliMi;
     }
 
@@ -16,12 +17,12 @@ public class Mobilya {
         return kapaliMi;
     }
 
-    public void setKapaliMi(boolean kapaliMi) {
-        this.kapaliMi = kapaliMi;
-    }
-
     public double getYukseklik() {
         return yukseklik;
+    }
+
+    public void setKapaliMi(boolean kapaliMi) {
+        this.kapaliMi = kapaliMi;
     }
 
     public void setYukseklik(double yukseklik) {

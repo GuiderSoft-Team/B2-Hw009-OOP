@@ -1,8 +1,7 @@
 public class Sehpa extends Mobilya implements Dortgen {
 
-    private double genislik;
+    private  double genislik;
     private double derinlik;
-
 
     public Sehpa() {
     }
@@ -16,6 +15,7 @@ public class Sehpa extends Mobilya implements Dortgen {
     @Override
     public void setGenislik(double genislik) {
         this.genislik=genislik;
+
     }
 
     @Override
@@ -26,6 +26,7 @@ public class Sehpa extends Mobilya implements Dortgen {
     @Override
     public void setDerinlik(double derinlik) {
         this.derinlik=derinlik;
+
     }
 
     @Override
@@ -45,6 +46,6 @@ public class Sehpa extends Mobilya implements Dortgen {
 
     @Override
     public String toString() {
-        return String.format("%s [%5.2f x %5.2f x %5.2f]",super.toString(),genislik,derinlik,getYukseklik());
+        return String.format("%s [%5.2f x %5.2f x 5.2f]",super.toString(),genislik,derinlik,getYukseklik());
     }
 }
