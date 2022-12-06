@@ -1,17 +1,24 @@
-public class YuvarlakMasa extends Mobilya implements Daire{
+public class YuvarlakMasas extends Mobilya implements Daire{
     private double yaricap;
 
-    public YuvarlakMasa() {
+
+
+    public YuvarlakMasas() {
     }
 
-    public YuvarlakMasa(String aciklama, double yukseklik, boolean kapaliMi, double yaricap) {
+    public YuvarlakMasas(double yaricap) {
+        this.yaricap = yaricap;
+    }
+
+    public YuvarlakMasas(String aciklama, double yukseklik, boolean kapaliMi, double yaricap) {
         super(aciklama, yukseklik, kapaliMi);
         this.yaricap = yaricap;
     }
 
     @Override
-    public void setYaricap(double yaricap) {
+    public void setYricap(double yaricap) {
         this.yaricap=yaricap;
+
     }
 
     @Override
@@ -21,13 +28,13 @@ public class YuvarlakMasa extends Mobilya implements Daire{
 
     @Override
     public double alanHesapla() {
-        double alan=0.0;
-        if(isKapaliMi()){
-            alan=2*Math.PI*Math.pow(yaricap,2)+2*Math.PI*yaricap*getYukseklik();
-        }else {
-            alan=Math.PI*Math.pow(yaricap,2);
-        }
-        return alan;
+     double alan=0.0;
+     if (isKapaliMi()){
+         alan=2*Math.PI*Math.pow(yaricap,2)+2*Math.PI*yaricap*getYukseklik();
+     }else {
+         alan=Math.PI*Math.pow(yaricap,2);
+     }
+     return alan;
     }
 
     @Override
@@ -39,4 +46,6 @@ public class YuvarlakMasa extends Mobilya implements Daire{
     public String toString() {
         return String.format("%s [%5.2f x %5.2f]",super.toString(),yaricap,getYukseklik());
     }
+
+
 }
