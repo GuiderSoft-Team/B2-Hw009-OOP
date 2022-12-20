@@ -2,9 +2,11 @@ public class Masa extends Mobilya implements Dortgen{
     private double genislik;
     private double derinlik;
 
+    public Masa(String aciklama, double yukseklik, boolean kapaliMi) {
+        super(aciklama, yukseklik, kapaliMi);
+    }
 
     public Masa() {
-
     }
 
     public Masa(String aciklama, double yukseklik, boolean kapaliMi, double genislik, double derinlik) {
@@ -26,6 +28,7 @@ public class Masa extends Mobilya implements Dortgen{
     @Override
     public void setDerinlik(double derinlik) {
         this.derinlik=derinlik;
+
     }
 
     @Override
@@ -36,12 +39,10 @@ public class Masa extends Mobilya implements Dortgen{
     @Override
     public double alanHesapla() {
         double alan=0.0;
-        if (super.isKapaliMi()){
+        if(super.isKapaliMi()){
             alan=6*genislik*derinlik;
-        }else {
-            alan=genislik*derinlik;
         }
-        return alan;
+        return genislik*derinlik;
     }
 
     @Override
