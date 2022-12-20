@@ -1,8 +1,8 @@
 public class Sehpa extends Mobilya implements Dortgen {
 
+
     private double genislik;
     private double derinlik;
-
 
     public Sehpa() {
     }
@@ -25,7 +25,7 @@ public class Sehpa extends Mobilya implements Dortgen {
 
     @Override
     public void setDerinlik(double derinlik) {
-        this.derinlik=derinlik;
+    this.derinlik=derinlik;
     }
 
     @Override

@@ -1,5 +1,6 @@
 public class YuvarlakSehpa extends Mobilya implements Daire{
-    private double yaricap;
+    private  double yaricap;
+
 
     public YuvarlakSehpa() {
     }
@@ -21,16 +22,14 @@ public class YuvarlakSehpa extends Mobilya implements Daire{
 
     @Override
     public double alanHesapla() {
-        return isKapaliMi()?
-                2*Math.PI*Math.pow(yaricap,2)+2*Math.PI*yaricap*getYukseklik():
-                Math.PI*Math.pow(yaricap,2);
+        return isKapaliMi()?2*Math.PI*Math.pow(yaricap,2)+2*Math.PI*yaricap*getYukseklik():
+                Math.PI * Math.pow(yaricap, 2);
     }
-
     @Override
     public double hacimHesapla() {
         return Math.PI*Math.pow(yaricap,2)*getYukseklik();
-    }
 
+    }
 
     @Override
     public String toString() {
